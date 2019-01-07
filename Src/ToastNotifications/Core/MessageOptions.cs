@@ -16,5 +16,7 @@ namespace ToastNotifications.Core
 
         public Action<NotificationBase> CloseClickAction { get; set; }
         public bool UnfreezeOnMouseLeave { get; set; } = false;
+
+        public bool CloseOnClick { get; set; } = false;
     }
 }

@@ -15,6 +15,7 @@
             <CheckBox Name="cbUnfreezeOnMouseLeave" Content="UnfreezeOnMouseLeave" IsChecked="False" Margin="5 2"/>
 
             <CheckBox Name="cbShowCloseButton" Content="ShowCloseButton" IsChecked="False" Margin="5 2"/>
+            <CheckBox Name="cbCloseOnClick" Content="CloseOnClick" IsChecked="False" Margin="5 2"/>
             <TextBlock Text="Notifications are queued" HorizontalAlignment="Right" Margin="20 2 0 0" />
 
         </DockPanel>

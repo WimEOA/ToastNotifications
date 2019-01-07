@@ -54,7 +54,8 @@ namespace BasicUsageExample
                 Tag = $"[This is Tag Value ({++_count})]",
                 FreezeOnMouseEnter = cbFreezeOnMouseEnter.IsChecked.GetValueOrDefault(),
                 UnfreezeOnMouseLeave = cbUnfreezeOnMouseLeave.IsChecked.GetValueOrDefault(),
-                ShowCloseButton = cbShowCloseButton.IsChecked.GetValueOrDefault()
+                ShowCloseButton = cbShowCloseButton.IsChecked.GetValueOrDefault(),
+                CloseOnClick = cbCloseOnClick.IsChecked.GetValueOrDefault()
             };
             _lastMessage = $"{_count} {name}";
             action(_lastMessage, opts);
@@ -88,7 +89,9 @@ namespace BasicUsageExample
                 CloseClickAction = CloseAction,
                 Tag = "[This is Tag Value]",
                 FreezeOnMouseEnter = cbFreezeOnMouseEnter.IsChecked.GetValueOrDefault(),
-                ShowCloseButton = cbShowCloseButton.IsChecked.GetValueOrDefault()
+                UnfreezeOnMouseLeave = cbUnfreezeOnMouseLeave.IsChecked.GetValueOrDefault(),
+                ShowCloseButton = cbShowCloseButton.IsChecked.GetValueOrDefault(),
+                CloseOnClick = cbCloseOnClick.IsChecked.GetValueOrDefault()
             };
             _vm.ShowSuccess(sameContent, opts);
             _lastMessage = sameContent;

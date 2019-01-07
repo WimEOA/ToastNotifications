@@ -24,9 +24,11 @@ namespace BasicUsageExample
                     offsetX: 25,  
                     offsetY: 100);
 
-                cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
-                    notificationLifetime: TimeSpan.FromSeconds(6), 
-                    maximumNotificationCount: MaximumNotificationCount.FromCount(6));
+                //cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
+                //    notificationLifetime: TimeSpan.FromSeconds(6), 
+                //    maximumNotificationCount: MaximumNotificationCount.FromCount(6));
+
+                cfg.LifetimeSupervisor = new CountBasedLifetimeSupervisor(MaximumNotificationCount.FromCount(6));
 
                 cfg.Dispatcher = Application.Current.Dispatcher;
 

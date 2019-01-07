@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using ToastNotifications.Core;
 
 namespace ToastNotifications.Messages.Success
@@ -25,7 +26,8 @@ namespace ToastNotifications.Messages.Success
 
         private void OnClose(object sender, RoutedEventArgs e)
         {
-            _viewModel.Close();
+            if (_viewModel.Options.CloseOnClick || sender is Button)
+                _viewModel.Close();
         }
 
         public override MessageOptions GetOptions()
